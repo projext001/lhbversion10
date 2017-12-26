@@ -1,0 +1,73 @@
+﻿.header {
+    color: white;
+    position: absolute;
+    float: left;
+    width: 97%;
+    height: 10%;
+    top: 15px;
+    left: 10px;
+}
+
+.footer {
+    background-color: gray;
+    color: white;
+    position: absolute;
+    float: left;
+    bottom: 0%;
+    width: 97%;
+    height: 10%;
+    left: 10px;
+}
+
+.menu {
+    width: 20%;
+    position: absolute;
+    left: 0%;
+    top: 10%;
+}
+
+.contentmaster {
+    position: absolute;
+    top: 14%;
+    width: 97%;
+    height: 80%;
+    left: 12px;
+    bottom: 32px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+    border-right: 1px solid #bbb;
+}
+
+li:last-child {
+    border-right: none;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: green;
+}
+
+.login{
+    position:absolute;
+    right:1px;
+    top: 0px;
+    height: 50px;
+    width: 50px;
+}

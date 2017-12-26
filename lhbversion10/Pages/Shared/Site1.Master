@@ -1,0 +1,39 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="lhbversion10.Pages.Shared.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>
+            <asp:ContentPlaceHolder ID="title" runat="server">
+    </asp:ContentPlaceHolder>
+    </title>
+    <link href="StyleSheet1.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+
+        <div class="header">
+            <ul>
+  <li><a href="Home.aspx">Home</a></li>
+  <li><a href="AboutUs.aspx">About</a></li>
+  <li><a href="ContactUs.aspx">Contact</a></li>
+</ul>
+        </div>
+
+
+        <div class="contentmaster">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+
+        <div class="footer">
+            <h3>&reg &nbsp&nbsp &copy; Copyright 2017</h3>
+        </div>
+    </form>
+</body>
+</html>
