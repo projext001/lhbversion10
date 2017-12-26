@@ -67,7 +67,20 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <Content Include="error.aspx" />
     <Content Include="Pages\Shared\Site1.Master" />
+    <Content Include="Pages\Specific\0pos\phome.aspx" />
+    <Content Include="Pages\Specific\0pos\pnb.aspx" />
+    <Content Include="Pages\Specific\0pos\pnc.aspx" />
+    <Content Include="Pages\Specific\0pos\Site2.Master" />
+    <Content Include="Pages\Specific\1manager\memp.aspx" />
+    <Content Include="Pages\Specific\1manager\mhome.aspx" />
+    <Content Include="Pages\Specific\1manager\mnb.aspx" />
+    <Content Include="Pages\Specific\1manager\mnbb.aspx" />
+    <Content Include="Pages\Specific\1manager\mnc.aspx" />
+    <Content Include="Pages\Specific\1manager\mncb.aspx" />
+    <Content Include="Pages\Specific\1manager\mob.aspx" />
+    <Content Include="Pages\Specific\1manager\Site3.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -90,6 +103,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="error.aspx.cs">
+      <DependentUpon>error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="error.aspx.designer.cs">
+      <DependentUpon>error.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Shared\AboutUs.aspx.cs">
       <DependentUpon>AboutUs.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -125,13 +145,93 @@
     <Compile Include="Pages\Shared\Site1.Master.designer.cs">
       <DependentUpon>Site1.Master</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Specific\0pos\phome.aspx.cs">
+      <DependentUpon>phome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Specific\0pos\phome.aspx.designer.cs">
+      <DependentUpon>phome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Specific\0pos\pnb.aspx.cs">
+      <DependentUpon>pnb.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Specific\0pos\pnb.aspx.designer.cs">
+      <DependentUpon>pnb.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Specific\0pos\pnc.aspx.cs">
+      <DependentUpon>pnc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Specific\0pos\pnc.aspx.designer.cs">
+      <DependentUpon>pnc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Specific\0pos\Site2.Master.cs">
+      <DependentUpon>Site2.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Specific\0pos\Site2.Master.designer.cs">
+      <DependentUpon>Site2.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Specific\1manager\memp.aspx.cs">
+      <DependentUpon>memp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Specific\1manager\memp.aspx.designer.cs">
+      <DependentUpon>memp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Specific\1manager\mhome.aspx.cs">
+      <DependentUpon>mhome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Specific\1manager\mhome.aspx.designer.cs">
+      <DependentUpon>mhome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Specific\1manager\mnb.aspx.cs">
+      <DependentUpon>mnb.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Specific\1manager\mnb.aspx.designer.cs">
+      <DependentUpon>mnb.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Specific\1manager\mnbb.aspx.cs">
+      <DependentUpon>mnbb.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Specific\1manager\mnbb.aspx.designer.cs">
+      <DependentUpon>mnbb.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Specific\1manager\mnc.aspx.cs">
+      <DependentUpon>mnc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Specific\1manager\mnc.aspx.designer.cs">
+      <DependentUpon>mnc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Specific\1manager\mncb.aspx.cs">
+      <DependentUpon>mncb.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Specific\1manager\mncb.aspx.designer.cs">
+      <DependentUpon>mncb.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Specific\1manager\mob.aspx.cs">
+      <DependentUpon>mob.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Specific\1manager\mob.aspx.designer.cs">
+      <DependentUpon>mob.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Specific\1manager\Site3.Master.cs">
+      <DependentUpon>Site3.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Specific\1manager\Site3.Master.designer.cs">
+      <DependentUpon>Site3.Master</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Pages\Specific\0pos\" />
-    <Folder Include="Pages\Specific\1manager\" />
-    <Folder Include="Pages\Specific\2backend\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\Helper\Helper.csproj">
       <Project>{11a886f4-ad67-4bb8-95ea-d4b720f0f779}</Project>

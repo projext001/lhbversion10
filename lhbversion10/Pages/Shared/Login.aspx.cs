@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Helper;
 
 namespace lhbversion10.Pages.Shared
 {
@@ -12,6 +13,14 @@ namespace lhbversion10.Pages.Shared
         protected void Page_Load(object sender, EventArgs e)
         {
 
+        }
+
+        protected void Login_btn_Click(object sender, EventArgs e)
+        {
+            Validate v = new Validate();
+            String id = user.Text.ToString();
+            String key = pass.Text.ToString();
+            v.LoginSys(id,key);
         }
     }
 }

@@ -1,0 +1,41 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site3.master.cs" Inherits="lhbversion10.Pages.Specific._1manager.Site3" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>
+        <asp:ContentPlaceHolder ID="title" runat="server">
+    </asp:ContentPlaceHolder>
+    </title>
+    <link href="../../Shared/StyleSheet1.css" rel="stylesheet" />
+    
+</head>
+<body>
+    <form id="form1" runat="server">
+        
+        
+        <div class="header">
+            <ul>
+                <li><a href="mhome.aspx">Home</a></li>
+                <li><a href="mnb.aspx">New Bill</a></li>
+                <li><a href="mnbb.aspx">New Bill Business</a></li>
+                <li><a href="mnc.aspx">New Customer</a></li>
+                <li><a href="mncb.aspx">New Customer Business</a></li>
+                <li><a href="mob.aspx">View Bill</a></li>
+                <li><a href="memp.aspx">Employee Management</a></li>
+            </ul>
+        </div>
+
+
+        <div class="contentmaster">
+            <asp:ContentPlaceHolder ID="body" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <div class="footer">
+
+        </div>
+    </form>
+</body>
+</html>

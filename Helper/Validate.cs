@@ -15,18 +15,17 @@ namespace Helper
             int z = t.Item2;
             if (t.Item1 == true)
             {
-                if (z == 1) { HttpContext.Current.Response.Redirect("~/.aspx"); }
-                if (z == 2) { HttpContext.Current.Response.Redirect("~/.aspx"); }
-                if (z == 3) { HttpContext.Current.Response.Redirect("~/.aspx"); }
-                if (z == 4) { HttpContext.Current.Response.Redirect("~/.aspx"); }
+                if (z == 1) { HttpContext.Current.Response.Redirect("~/Pages/Specific/0pos/phome.aspx"); }
+                if (z == 2) { HttpContext.Current.Response.Redirect("~/Pages/Specific/1manager/mhome.aspx"); }
+                if (z == 3) { HttpContext.Current.Response.Redirect("~/Pages/Specific/2backend/bhome.aspx"); }
             }
-            else HttpContext.Current.Response.Redirect("~/.aspx");
+            else HttpContext.Current.Response.Redirect("~/error.aspx");
         }
 
         //Check if access is allowed for a page using this function
         public void PageAcc(int[] a, int b)
         {
-            if (!a.Contains(b)) { HttpContext.Current.Response.Redirect("~/.aspx"); }
+            if (!a.Contains(b)) { HttpContext.Current.Response.Redirect("~/error.aspx"); }
         }
     }
 }
