@@ -81,6 +81,10 @@
     <Content Include="Pages\Specific\1manager\mncb.aspx" />
     <Content Include="Pages\Specific\1manager\mob.aspx" />
     <Content Include="Pages\Specific\1manager\Site3.Master" />
+    <Content Include="Pages\Specific\2backend\bdel.aspx" />
+    <Content Include="Pages\Specific\2backend\bhome.aspx" />
+    <Content Include="Pages\Specific\2backend\play.png" />
+    <Content Include="Pages\Specific\2backend\Site4.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -229,11 +233,30 @@
     <Compile Include="Pages\Specific\1manager\Site3.Master.designer.cs">
       <DependentUpon>Site3.Master</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Specific\2backend\bdel.aspx.cs">
+      <DependentUpon>bdel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Specific\2backend\bdel.aspx.designer.cs">
+      <DependentUpon>bdel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Specific\2backend\bhome.aspx.cs">
+      <DependentUpon>bhome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Specific\2backend\bhome.aspx.designer.cs">
+      <DependentUpon>bhome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Specific\2backend\Site4.Master.cs">
+      <DependentUpon>Site4.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Specific\2backend\Site4.Master.designer.cs">
+      <DependentUpon>Site4.Master</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Pages\Specific\2backend\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\Helper\Helper.csproj">
       <Project>{11a886f4-ad67-4bb8-95ea-d4b720f0f779}</Project>
@@ -255,7 +278,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>52081</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:52081/</IISUrl>
+          <IISUrl>http://localhost:65000/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

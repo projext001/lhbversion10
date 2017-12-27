@@ -18,6 +18,7 @@ namespace Helper
                 if (z == 1) { HttpContext.Current.Response.Redirect("~/Pages/Specific/0pos/phome.aspx"); }
                 if (z == 2) { HttpContext.Current.Response.Redirect("~/Pages/Specific/1manager/mhome.aspx"); }
                 if (z == 3) { HttpContext.Current.Response.Redirect("~/Pages/Specific/2backend/bhome.aspx"); }
+                if (z == 4) { HttpContext.Current.Response.Redirect("~/Pages/Specific/2backend/bhome.aspx"); }
             }
             else HttpContext.Current.Response.Redirect("~/error.aspx");
         }
