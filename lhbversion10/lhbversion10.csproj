@@ -231,7 +231,9 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Pages\Specific\2backend\" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Helper\Helper.csproj">
       <Project>{11a886f4-ad67-4bb8-95ea-d4b720f0f779}</Project>
