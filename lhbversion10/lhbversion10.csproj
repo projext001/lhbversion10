@@ -68,6 +68,7 @@
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="error.aspx" />
+    <Content Include="Pages\Shared\error.aspx" />
     <Content Include="Pages\Shared\Site1.Master" />
     <Content Include="Pages\Specific\0pos\phome.aspx" />
     <Content Include="Pages\Specific\0pos\pnb.aspx" />
@@ -127,6 +128,13 @@
     </Compile>
     <Compile Include="Pages\Shared\ContactUs.aspx.designer.cs">
       <DependentUpon>ContactUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Shared\error.aspx.cs">
+      <DependentUpon>error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Shared\error.aspx.designer.cs">
+      <DependentUpon>error.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Shared\Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
