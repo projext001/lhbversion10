@@ -1,6 +1,5 @@
 ﻿.header {
     color: white;
-    position: absolute;
     float: left;
     width: 97%;
     height: 10%;
@@ -11,11 +10,8 @@
 .footer {
     background-color: gray;
     color: white;
-    position: absolute;
     float: left;
-    bottom: 0%;
     width: 97%;
-    height: 10%;
     left: 10px;
 }
 
@@ -27,7 +23,6 @@
 }
 
 .contentmaster {
-    position: absolute;
     top: 14%;
     width: 97%;
     height: 80%;
@@ -66,8 +61,8 @@ li a:hover:not(.active) {
 
 .login{
     position:absolute;
-    right:1px;
-    top: 0px;
+    left:1px;
+    bottom: 0px;
     height: 50px;
     width: 50px;
 }

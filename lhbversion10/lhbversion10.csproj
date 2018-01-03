@@ -86,6 +86,7 @@
     <Content Include="Pages\Specific\2backend\bhome.aspx" />
     <Content Include="Pages\Specific\2backend\play.png" />
     <Content Include="Pages\Specific\2backend\Site4.Master" />
+    <None Include="Properties\PublishProfiles\Panini.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -35,7 +35,7 @@ namespace Helper
             }
             
         }
-        //Insert Product Type
+        //Insert Product Type in Products
         public Boolean ipt(String a, String b, String c)
         {
             try
@@ -57,6 +57,32 @@ namespace Helper
                 return false;
             }
         }
+        //Insert Product in Product List
+        public Boolean ip(String a, String b, String c, String d, String e, String f)
+        {
+            try
+            {
+                string insert = "Insert Into[ProdList]([Cost],[batchno],[serialno],[ProductId],[Description],[costprice]) values(@a,@b,@c,@d,@e,@f)";
+                SqlCommand command = new SqlCommand(insert, conn);
+                command.Parameters.AddWithValue("@a", a);
+                command.Parameters.AddWithValue("@b", b);
+                command.Parameters.AddWithValue("@c", c);
+                command.Parameters.AddWithValue("@d", d);
+                command.Parameters.AddWithValue("@e", e);
+                command.Parameters.AddWithValue("@f", f);
+                conn.Open();
+                int i = command.ExecuteNonQuery();
+                conn.Close();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.Write(ex);
+                conn.Close();
+                return false;
+            }
+        }
+        //Deleting item from database using their id
         public Boolean del(String a,String b)
         {
             try
@@ -76,6 +102,7 @@ namespace Helper
                 return false;
             }
         }
+        //Checking deltion authority and calling del function for same if authorised
         public Boolean rem(String a,String b,String c,String d)
         {
             Tuple<Boolean, int> t = UC(a, b);

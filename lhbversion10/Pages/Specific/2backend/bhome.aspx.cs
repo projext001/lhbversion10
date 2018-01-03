@@ -28,5 +28,18 @@ namespace lhbversion10.Pages.Specific._2backend
                 Notice.Text = "Insert Query Could Not be Executed";
             }
         }
+
+        protected void Execute_Click1(object sender, ImageClickEventArgs e)
+        {
+            Boolean b = dbh.ip(prodsp.Text.ToString(),batchno.Text.ToString(),serialno.Text.ToString(),prodid.SelectedItem.Text.ToString(),proddesc.Text.ToString(),prodcp.Text.ToString());
+            if (b == true)
+            {
+                Notice0.Text = Notice.Text.ToString() + "\nInsert Query Executed Normally";
+            }
+            else
+            {
+                Notice0.Text = "Insert Query Could Not be Executed";
+            }
+        }
     }
 }
