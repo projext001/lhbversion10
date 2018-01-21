@@ -13,6 +13,15 @@ namespace lhbversion10.Pages.Specific._2backend {
     public partial class bhome {
         
         /// <summary>
+        /// ap control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton ap;
+        
+        /// <summary>
         /// Panel1 control.
         /// </summary>
         /// <remarks>
@@ -155,6 +164,15 @@ namespace lhbversion10.Pages.Specific._2backend {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Notice0;
+        
+        /// <summary>
+        /// apt control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton apt;
         
         /// <summary>
         /// Panel2 control.

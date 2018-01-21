@@ -12,17 +12,14 @@
     
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form id="form1" runat="server" method="post">
         
         
         <div class="header">
             <ul>
                 <li><a href="mhome.aspx">Home</a></li>
-                <li><a href="mnb.aspx">New Bill</a></li>
-                <li><a href="mnbb.aspx">New Bill Business</a></li>
-                <li><a href="mnc.aspx">New Customer</a></li>
-                <li><a href="mncb.aspx">New Customer Business</a></li>
-                <li><a href="mob.aspx">View Bill</a></li>
+                <li><a href="mnb.aspx">Bill</a></li>
+                <li><a href="mnc.aspx">Customer</a></li>
                 <li><a href="memp.aspx">Employee Management</a></li>
             </ul>
         </div>

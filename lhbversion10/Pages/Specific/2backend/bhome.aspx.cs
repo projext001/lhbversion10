@@ -13,6 +13,8 @@ namespace lhbversion10.Pages.Specific._2backend
         DBHelper dbh = new DBHelper();
         protected void Page_Load(object sender, EventArgs e)
         {
+            Panel1.Visible = false;
+            Panel2.Visible = false;
 
         }
 
@@ -40,6 +42,16 @@ namespace lhbversion10.Pages.Specific._2backend
             {
                 Notice0.Text = "Insert Query Could Not be Executed";
             }
+        }
+
+        protected void ap_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ap.Checked) { Panel1.Visible=true; Panel2.Visible = false; }
+        }
+
+        protected void apt_CheckedChanged(object sender, EventArgs e)
+        {
+            if (apt.Checked) { Panel2.Visible = true; Panel1.Visible = false; }
         }
     }
 }

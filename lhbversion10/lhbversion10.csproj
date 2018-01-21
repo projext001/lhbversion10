@@ -48,6 +48,7 @@
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DataVisualization" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -71,21 +72,25 @@
     <Content Include="Pages\Shared\error.aspx" />
     <Content Include="Pages\Shared\Site1.Master" />
     <Content Include="Pages\Specific\0pos\phome.aspx" />
+    <Content Include="Pages\Specific\0pos\play.png" />
     <Content Include="Pages\Specific\0pos\pnb.aspx" />
     <Content Include="Pages\Specific\0pos\pnc.aspx" />
     <Content Include="Pages\Specific\0pos\Site2.Master" />
+    <Content Include="Pages\Specific\1manager\mdc.aspx" />
     <Content Include="Pages\Specific\1manager\memp.aspx" />
     <Content Include="Pages\Specific\1manager\mhome.aspx" />
     <Content Include="Pages\Specific\1manager\mnb.aspx" />
     <Content Include="Pages\Specific\1manager\mnbb.aspx" />
     <Content Include="Pages\Specific\1manager\mnc.aspx" />
-    <Content Include="Pages\Specific\1manager\mncb.aspx" />
-    <Content Include="Pages\Specific\1manager\mob.aspx" />
+    <Content Include="Pages\Specific\1manager\mvb.aspx" />
+    <Content Include="Pages\Specific\1manager\play.png" />
     <Content Include="Pages\Specific\1manager\Site3.Master" />
     <Content Include="Pages\Specific\2backend\bdel.aspx" />
     <Content Include="Pages\Specific\2backend\bhome.aspx" />
     <Content Include="Pages\Specific\2backend\play.png" />
     <Content Include="Pages\Specific\2backend\Site4.Master" />
+    <Content Include="Pages\Specific\1manager\NestedMasterPageBill.master" />
+    <Content Include="Pages\Specific\1manager\NestedMasterPageCustomer.master" />
     <None Include="Properties\PublishProfiles\Panini.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -186,6 +191,13 @@
     <Compile Include="Pages\Specific\0pos\Site2.Master.designer.cs">
       <DependentUpon>Site2.Master</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Specific\1manager\mdc.aspx.cs">
+      <DependentUpon>mdc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Specific\1manager\mdc.aspx.designer.cs">
+      <DependentUpon>mdc.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Specific\1manager\memp.aspx.cs">
       <DependentUpon>memp.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -221,19 +233,26 @@
     <Compile Include="Pages\Specific\1manager\mnc.aspx.designer.cs">
       <DependentUpon>mnc.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Specific\1manager\mncb.aspx.cs">
-      <DependentUpon>mncb.aspx</DependentUpon>
+    <Compile Include="Pages\Specific\1manager\mvb.aspx.cs">
+      <DependentUpon>mvb.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\Specific\1manager\mncb.aspx.designer.cs">
-      <DependentUpon>mncb.aspx</DependentUpon>
+    <Compile Include="Pages\Specific\1manager\mvb.aspx.designer.cs">
+      <DependentUpon>mvb.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Specific\1manager\mob.aspx.cs">
-      <DependentUpon>mob.aspx</DependentUpon>
+    <Compile Include="Pages\Specific\1manager\NestedMasterPageBill.master.cs">
+      <DependentUpon>NestedMasterPageBill.master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\Specific\1manager\mob.aspx.designer.cs">
-      <DependentUpon>mob.aspx</DependentUpon>
+    <Compile Include="Pages\Specific\1manager\NestedMasterPageBill.master.designer.cs">
+      <DependentUpon>NestedMasterPageBill.master</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Specific\1manager\NestedMasterPageCustomer.master.cs">
+      <DependentUpon>NestedMasterPageCustomer.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Specific\1manager\NestedMasterPageCustomer.master.designer.cs">
+      <DependentUpon>NestedMasterPageCustomer.master</DependentUpon>
     </Compile>
     <Compile Include="Pages\Specific\1manager\Site3.Master.cs">
       <DependentUpon>Site3.Master</DependentUpon>

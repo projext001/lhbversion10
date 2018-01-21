@@ -8,17 +8,17 @@ namespace Helper
     {
         //CookieHelper ch = new CookieHelper();
         SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["WebDBConnectionString"].ToString());
-        
+
         SqlDataReader dr;
         public Tuple<Boolean, int> UC(String a, String pa)
         {
             SqlCommand command = new SqlCommand();
             command.CommandText = "Select * from [User] where Id=@name and pass=@pas";
-                command.Parameters.AddWithValue("@name", a);
-                command.Parameters.AddWithValue("@pas", pa);
-                command.Connection = conn;
-                conn.Open();
-                dr = command.ExecuteReader();
+            command.Parameters.AddWithValue("@name", a);
+            command.Parameters.AddWithValue("@pas", pa);
+            command.Connection = conn;
+            conn.Open();
+            dr = command.ExecuteReader();
             if (dr.HasRows)
             {
                 dr.Read();
@@ -33,7 +33,7 @@ namespace Helper
                 conn.Close();
                 return Tuple.Create(false, 0);
             }
-            
+
         }
         //Insert Product Type in Products
         public Boolean ipt(String a, String b, String c)
@@ -82,6 +82,40 @@ namespace Helper
                 return false;
             }
         }
+
+        //Update User table
+        public Boolean pd(String a, String b)
+        {
+            String ins = "UPDATE [User] SET acl="+b+" where (Id='"+a+"')";
+            try
+            {
+                SqlCommand comm = new SqlCommand(ins,conn);
+                conn.Open();
+                int i = comm.ExecuteNonQuery();
+                conn.Close();
+                return true;
+            }
+            catch (Exception ex) { Console.Write(ex);conn.Close();return false; }
+        }
+
+        //Adding a user
+        public Boolean au(String a, String b)
+        {
+            try
+            {
+                string ins = "Insert Into [User]([pass],[acl]) values (@a,@b)";
+                SqlCommand c = new SqlCommand(ins, conn);
+                c.Parameters.AddWithValue("@a",a);
+                c.Parameters.AddWithValue("@b",b);
+                conn.Open();
+                int i = c.ExecuteNonQuery();
+                conn.Close();
+                return true;
+            }
+            catch(Exception ex)
+            { Console.Write(ex); conn.Close(); return false; }
+        }
+        
         //Deleting item from database using their id
         public Boolean del(String a,String b)
         {

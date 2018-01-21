@@ -4,6 +4,10 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="body" runat="server">
 
+    <br />
+    <asp:RadioButton ID="ap" runat="server" AutoPostBack="True" GroupName="product" OnCheckedChanged="ap_CheckedChanged" Text="Add a Product" />
+    <br />
+
     <asp:Panel ID="Panel1" runat="server" BorderColor="#0066FF" BorderStyle="Dashed" BorderWidth="5px">
         <center><asp:Label ID="Label1" runat="server" Text="Add a Product in database" Font-Bold="True" ForeColor="#CC0000" /></center>
         <br />
@@ -27,7 +31,9 @@
         <br />
     </asp:Panel>
     <br />
-    <center><asp:Label ID="Notice0" runat="server" Text="Label"></asp:Label></center>
+    <center><asp:Label ID="Notice0" runat="server"></asp:Label></center>
+
+    <asp:RadioButton ID="apt" runat="server" AutoPostBack="True" GroupName="product" OnCheckedChanged="apt_CheckedChanged" Text="Add Product Type" />
 
     <br /><br />
 

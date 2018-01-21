@@ -1,0 +1,20 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Pages/Specific/1manager/Site3.Master" AutoEventWireup="true" CodeBehind="NestedMasterPageBill.master.cs" Inherits="lhbversion10.Pages.Specific._1manager.NestedMasterPageBill" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
+    Bill
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="body" runat="server">
+    <table>
+        <tr>
+            <td style="width:15%" valign="top">
+                <ul>
+                    <li><a href="mnb.aspx">New Bill</a></li>
+                    <li><a href="mnbb.aspx">New Business Bill</a></li>
+                    <li><a href="mvb.aspx">View Bill</a></li>
+                </ul>
+            </td>
+            <td style="width:85%">
+                <asp:ContentPlaceHolder ID="innerbody" runat="server"></asp:ContentPlaceHolder>
+            </td>
+        </tr>
+    </table>
+</asp:Content>
