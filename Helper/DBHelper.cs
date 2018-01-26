@@ -10,7 +10,7 @@ namespace Helper
         SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["WebDBConnectionString"].ToString());
 
         SqlDataReader dr;
-        public Tuple<Boolean, int> UC(String a, String pa)
+        public Tuple<Boolean, int, int> UC(String a, String pa)
         {
             SqlCommand command = new SqlCommand();
             command.CommandText = "Select * from [User] where Id=@name and pass=@pas";
@@ -25,13 +25,12 @@ namespace Helper
                 int y = Convert.ToInt32(dr[0]);
                 int z = Convert.ToInt32(dr[2]);
                 conn.Close();
-                //ch.CreateCookie(y, z);
-                return Tuple.Create(true, z);
+                return Tuple.Create(true, z, y);
             }
             else
             {
                 conn.Close();
-                return Tuple.Create(false, 0);
+                return Tuple.Create(false, 0, 0);
             }
 
         }
@@ -139,7 +138,7 @@ namespace Helper
         //Checking deltion authority and calling del function for same if authorised
         public Boolean rem(String a,String b,String c,String d)
         {
-            Tuple<Boolean, int> t = UC(a, b);
+            Tuple<Boolean, int, int> t = UC(a, b);
             if (t.Item1==true && t.Item2==4)
             {
                 del(c,d);

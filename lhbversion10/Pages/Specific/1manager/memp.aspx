@@ -7,9 +7,12 @@
         <asp:GridView ID="GridView1" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSource1" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
             <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
             <Columns>
-                <asp:BoundField DataField="Id" HeaderText="Id" ReadOnly="True" SortExpression="Id" />
+                <asp:BoundField DataField="Id" HeaderText="Id" ReadOnly="True" SortExpression="Id" InsertVisible="False" />
                 <asp:BoundField DataField="acl" HeaderText="acl" SortExpression="acl" />
-                <asp:CommandField ShowSelectButton="True" />
+                <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" />
+                <asp:BoundField DataField="Address1" HeaderText="Address1" SortExpression="Address1" />
+                <asp:BoundField DataField="Address2" HeaderText="Address2" SortExpression="Address2" />
+                <asp:BoundField DataField="Mobile_No" HeaderText="Mobile_No" SortExpression="Mobile_No" />
             </Columns>
             <EditRowStyle BackColor="#999999" />
             <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
@@ -59,6 +62,6 @@
         <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Demote/Promote" ValidationGroup="rdpemp" />
         <br />
     </asp:Panel>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:WebDBConnectionString %>" SelectCommand="SELECT [Id], [acl] FROM [User] ORDER BY [acl], [Id]"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:WebDBConnectionString %>" SelectCommand="SELECT [Id], [acl], [Name], [Address1], [Mobile_No], [Address2] FROM [User]"></asp:SqlDataSource>
     <br />
     </asp:Content>

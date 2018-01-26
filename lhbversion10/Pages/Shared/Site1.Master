@@ -18,9 +18,11 @@
 
         <div class="header">
             <ul>
-  <li><a href="Home.aspx">Home</a></li>
+  <li><a href="Home.aspx">
+                    <asp:Image ID="Image3" runat="server" CssClass="login" ImageUrl="~/Home.png"/></a></li>
   <li><a href="AboutUs.aspx">About</a></li>
   <li><a href="ContactUs.aspx">Contact</a></li>
+  <li><a href="Login.aspx"><asp:Image ID="Image1" CssClass="login" runat="server" ImageUrl="~/Pages/Shared/login.png" AlternateText="LOGIN" BackColor="White" DescriptionUrl="~/Pages/Shared/Login.aspx"/></a><a href="Profile.aspx"><asp:Image ID="Image2" CssClass="login" runat="server" ImageUrl="~/Pages/Shared/user.png" AlternateText="My Profile" BackColor="White" DescriptionUrl="~/Pages/Shared/Profile.aspx"/></a></li>
 </ul>
         </div>
 

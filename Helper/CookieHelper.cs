@@ -5,15 +5,19 @@ namespace Helper
 {
     public class CookieHelper
     {
+        String id,acl;
+        HttpCookie userInfo = new HttpCookie("userInfo");
         public void CreateCookie(int a, int b)
         {
-            String id = a.ToString();
-            String acl = b.ToString();
-            HttpCookie userInfo = new HttpCookie("userInfo");
+            id = a.ToString();
+            acl = b.ToString();
             userInfo["Id"] = id;
             userInfo["Ac"] = acl;
             userInfo.Expires.Add(new TimeSpan(0, 30, 0));
-            HttpContext.Current.Response.Cookies.Add(userInfo);
+        }
+        public HttpCookie GetCookie()
+        {
+            return userInfo;
         }
     }
 }

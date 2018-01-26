@@ -12,7 +12,12 @@ namespace lhbversion10.Pages.Shared
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Validate v = new Validate();
+            HttpCookie c = Request.Cookies["userInfo"];
+            if (c != null)
+            {
+                Server.Transfer("~/Pages/Shared/Home.aspx");
+            }
         }
 
         protected void Login_btn_Click(object sender, EventArgs e)

@@ -9,12 +9,15 @@ namespace Helper
     {
         public void LoginSys(String a, String pa)
         {
+            CookieHelper ch = new CookieHelper();
             DBHelper dbh = new DBHelper();
             //send value to DBHelper class to validate credentials and get 2 values
-            Tuple<Boolean, int> t = dbh.UC(a, pa);
+            Tuple<Boolean, int, int> t = dbh.UC(a, pa);
             int z = t.Item2;
             if (t.Item1 == true)
             {
+                ch.CreateCookie(t.Item3,t.Item2);
+                HttpContext.Current.Response.Cookies.Add(ch.GetCookie());
                 if (z == 1) { HttpContext.Current.Response.Redirect("~/Pages/Specific/0pos/phome.aspx"); }
                 if (z == 2) { HttpContext.Current.Response.Redirect("~/Pages/Specific/1manager/mhome.aspx"); }
                 if (z == 3) { HttpContext.Current.Response.Redirect("~/Pages/Specific/2backend/bhome.aspx"); }

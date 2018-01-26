@@ -17,10 +17,13 @@
         
         <div class="header">
             <ul>
+                <li><a href="../../Shared/Home.aspx">
+                    <asp:Image ID="Image1" runat="server" CssClass="login" ImageUrl="~/Home.png"/></a></li>
                 <li><a href="mhome.aspx">Home</a></li>
                 <li><a href="mnb.aspx">Bill</a></li>
                 <li><a href="mnc.aspx">Customer</a></li>
                 <li><a href="memp.aspx">Employee Management</a></li>
+                <li><a href="Login.aspx"><asp:Image ID="Image2" CssClass="login" runat="server" ImageUrl="~/Pages/Shared/user.png" AlternateText="My Profile" BackColor="White" DescriptionUrl="~/Pages/Shared/Profile.aspx"/></a></li>
             </ul>
         </div>
 

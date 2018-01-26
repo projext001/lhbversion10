@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Helper;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -11,6 +12,14 @@ namespace lhbversion10.Pages.Specific._1manager
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            Validate v = new Validate();
+            int[] a = { 2 };
+            HttpCookie c = Request.Cookies["userInfo"];
+            if (c != null)
+            {
+                v.PageAcc(a, Convert.ToInt32(c["Ac"].ToString()));
+            }
+            else { Server.Transfer("~/Pages/Shared/Login.aspx"); }
 
         }
     }

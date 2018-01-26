@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Helper;
 
 namespace lhbversion10.Pages.Specific._0pos
 {

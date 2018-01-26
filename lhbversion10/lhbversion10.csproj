@@ -69,7 +69,10 @@
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="error.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Home.png" />
     <Content Include="Pages\Shared\error.aspx" />
+    <Content Include="Pages\Shared\Profile.aspx" />
     <Content Include="Pages\Shared\Site1.Master" />
     <Content Include="Pages\Specific\0pos\phome.aspx" />
     <Content Include="Pages\Specific\0pos\play.png" />
@@ -98,6 +101,7 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+    <Content Include="user.png" />
     <Content Include="Web.sitemap" />
   </ItemGroup>
   <ItemGroup>
@@ -120,6 +124,9 @@
     </Compile>
     <Compile Include="error.aspx.designer.cs">
       <DependentUpon>error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Pages\Shared\AboutUs.aspx.cs">
       <DependentUpon>AboutUs.aspx</DependentUpon>
@@ -155,6 +162,13 @@
     </Compile>
     <Compile Include="Pages\Shared\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Shared\Profile.aspx.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Shared\Profile.aspx.designer.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Shared\Site1.Master.cs">
       <DependentUpon>Site1.Master</DependentUpon>
