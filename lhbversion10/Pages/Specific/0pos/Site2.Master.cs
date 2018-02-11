@@ -22,5 +22,15 @@ namespace lhbversion10.Pages.Specific._0pos
             else { Server.Transfer("~/Login.aspx"); }
 
         }
+
+        protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+        {
+            Server.Transfer("/Pages/Shared/Login.aspx");
+        }
+
+        protected void ImageButton2_Click(object sender, ImageClickEventArgs e)
+        {
+            Server.Transfer("/Pages/Shared/Profile.aspx");
+        }
     }
 }

@@ -24,7 +24,7 @@ namespace lhbversion10.Pages.Specific._1manager
 
         protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
         {
-            dbh.au(TextBox1.Text.ToString(),DropDownList1.SelectedItem.Value.ToString());
+            dbh.au(TextBox1.Text.ToString(),DropDownList1.SelectedItem.Value.ToString(),name.Text.ToString(),adl1.Text.ToString(),mobile.Text.ToString(),nidt.SelectedItem.Value.ToString(),nidn.Text.ToString());
             GridView1.DataBind();
         }
 

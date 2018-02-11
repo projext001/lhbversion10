@@ -59,9 +59,44 @@ li a:hover:not(.active) {
     background-color: green;
 }
 
-.login{
-    position:relative;
-    right:1px;
+.login {
+    float: right;
+    position: relative;
+    right: 1px;
     height: 30px;
     width: 30px;
+}
+.floatRight {
+    float: right;
+}
+.floatLeft {
+    float: left;
+}
+.home {
+    height: 20px;
+    width: 20px;
+}
+.profiletable{
+    font-size:35px;
+    width:100%;    
+    padding:5px;
+}
+.cola {
+    color: white;
+    background-color: #0090ff;
+    font-family:Centaur;
+    width:50%;
+}
+.colb {
+    color: white;
+    background-color: #43b12f;
+    width: 50%;
+}
+.textc {
+    font-size: 35px;
+    width: 90%;
+    height: 100%;
+    color: white;
+    font-family: Centaur;
+    background-color: #43b12f;
 }

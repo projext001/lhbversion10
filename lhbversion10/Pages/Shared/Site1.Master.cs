@@ -16,9 +16,20 @@ namespace lhbversion10.Pages.Shared
             HttpCookie c = Request.Cookies["userInfo"];
             if (c != null)
             {
-                Image1.Visible = false;
+                ImageButton1.Enabled = false; ImageButton1.Visible = false;                
             }
-            else { Image2.Visible = false; }
+            else { ImageButton2.Enabled = false; ImageButton2.Visible = false;
+            }
+        }
+
+        protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+        {
+            Server.Transfer("/Pages/Shared/Login.aspx");
+        }
+
+        protected void ImageButton2_Click(object sender, ImageClickEventArgs e)
+        {
+            Server.Transfer("/Pages/Shared/Profile.aspx");
         }
     }
 }

@@ -98,16 +98,21 @@ namespace Helper
         }
 
         //Adding a user
-        public Boolean au(String a, String b)
+        public Boolean au(String a, String b, String c,String d,String e,String f,String g)
         {
             try
             {
-                string ins = "Insert Into [User]([pass],[acl]) values (@a,@b)";
-                SqlCommand c = new SqlCommand(ins, conn);
-                c.Parameters.AddWithValue("@a",a);
-                c.Parameters.AddWithValue("@b",b);
+                string ins = "Insert Into [User]([pass],[acl],[Name],[Address1],[Mobile_No],[National_Id_Type],[National_Id_No]) values (@a,@b,@c,@d,@e,@f,@g)";
+                SqlCommand x = new SqlCommand(ins, conn);
+                x.Parameters.AddWithValue("@a", a);
+                x.Parameters.AddWithValue("@b", b);
+                x.Parameters.AddWithValue("@c", c);
+                x.Parameters.AddWithValue("@d", d);
+                x.Parameters.AddWithValue("@e", e);
+                x.Parameters.AddWithValue("@f", f);
+                x.Parameters.AddWithValue("@g", g);
                 conn.Open();
-                int i = c.ExecuteNonQuery();
+                int i = x.ExecuteNonQuery();
                 conn.Close();
                 return true;
             }

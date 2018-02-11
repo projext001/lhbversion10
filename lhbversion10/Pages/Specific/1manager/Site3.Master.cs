@@ -19,8 +19,17 @@ namespace lhbversion10.Pages.Specific._1manager
             {
                 v.PageAcc(a, Convert.ToInt32(c["Ac"].ToString()));
             }
-            else { Server.Transfer("~/Pages/Shared/Login.aspx"); }
+            else { Server.Transfer("~/Login.aspx"); }
 
+        }
+        protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+        {
+            Server.Transfer("/Pages/Shared/Login.aspx");
+        }
+
+        protected void ImageButton2_Click(object sender, ImageClickEventArgs e)
+        {
+            Server.Transfer("/Pages/Shared/Profile.aspx");
         }
     }
 }

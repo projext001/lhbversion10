@@ -15,13 +15,12 @@
         <div class="header">
              <ul>
                  <li><a href="../../Shared/Home.aspx">
-                    <asp:Image ID="Image1" runat="server" CssClass="login" ImageUrl="~/Home.png"/></a></li>
+                    <asp:Image ID="Image1" runat="server" CssClass="home" ImageUrl="~/Home.png"/></a></li>
                  <li><a href="phome.aspx">Home</a></li>
                  <li><a href="pnb.aspx">New Bill</a></li>
                  <li><a href="pnc.aspx">New Customer</a></li>
-                 <li><a href="Login.aspx"><asp:Image ID="Image2" CssClass="login" runat="server" ImageUrl="~/Pages/Shared/user.png" AlternateText="My Profile" BackColor="White" DescriptionUrl="~/Pages/Shared/Profile.aspx"/></a></li>
-
              </ul>
+             <asp:ImageButton ID="ImageButton2" runat="server" ImageUrl="~/Pages/Shared/user.png" CssClass="login" OnClick="ImageButton2_Click" />
         </div>
 
 

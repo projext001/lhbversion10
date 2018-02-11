@@ -101,7 +101,7 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
-    <Content Include="user.png" />
+    <Content Include="Pages\Shared\user.png" />
     <Content Include="Web.sitemap" />
   </ItemGroup>
   <ItemGroup>
