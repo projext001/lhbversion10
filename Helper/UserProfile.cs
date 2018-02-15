@@ -10,6 +10,7 @@ namespace Helper
         SqlCommand command = new SqlCommand();
         SqlDataReader dr;
         String Name, Address, Mobile, NIDT, NIDN;
+        public UserProfile() { }
         public UserProfile(String id)
         {
             command.CommandText = "Select * from [User] where Id=@a";
@@ -56,7 +57,27 @@ namespace Helper
 
         public void execute_update(String id, String ColName, String Value)
         {
-            command.CommandText = "";
+            String ins = "UPDATE [User] SET "+ColName+"=" + Value + " where (Id='" + id + "')";
+            command.CommandText = ins;
+            command.Connection = conn;
+            conn.Open();
+            int i = command.ExecuteNonQuery();
+        }
+
+        public Boolean update_pass(String id,String OldValue,String NewValue)
+        {
+            DBHelper dbh = new DBHelper();
+            Tuple<Boolean , int, int> u = dbh.UC(id,OldValue);
+            String ins = "UPDATE [User] SET pass='" + NewValue + "' where (Id='" + id + "')";
+            command.CommandText = ins;
+            command.Connection = conn;
+            conn.Open();
+            if (u.Item1 == true)
+            {
+                int i = command.ExecuteNonQuery();
+                return true;
+            }
+            else { return false; }
         }
     }
 }

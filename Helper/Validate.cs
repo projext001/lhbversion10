@@ -16,6 +16,8 @@ namespace Helper
             int z = t.Item2;
             if (t.Item1 == true)
             {
+                AAA l = new AAA(t.Item3.ToString());
+                l.Attendance();
                 ch.CreateCookie(t.Item3,t.Item2);
                 HttpContext.Current.Response.Cookies.Add(ch.GetCookie());
                 if (z == 1) { HttpContext.Current.Response.Redirect("~/Pages/Specific/0pos/phome.aspx"); }

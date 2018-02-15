@@ -10,6 +10,7 @@ namespace Helper
         SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["WebDBConnectionString"].ToString());
 
         SqlDataReader dr;
+        //check user
         public Tuple<Boolean, int, int> UC(String a, String pa)
         {
             SqlCommand command = new SqlCommand();

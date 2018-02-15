@@ -16,8 +16,9 @@
         <div class="header">
             <ul>
                 <li><a href="../../Shared/Home.aspx"><asp:Image ID="Image1" runat="server" CssClass="home" ImageUrl="~/Home.png" /></a></li>
-                <li><a href="bhome.aspx">Home</a></li>
-                <li><a href="bdel.aspx">Delete</a></li>
+                <li><a href="bhome.aspx">Add Product</a></li>
+                <li><a href="bdel.aspx">Delete Product</a></li>
+                <li><a href="bupdate.aspx">Update Product</a></li>
             </ul><asp:ImageButton ID="ImageButton2" runat="server" ImageUrl="~/Pages/Shared/user.png" CssClass="login" OnClick="ImageButton2_Click" />
         </div>
 

@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AAA.cs" />
     <Compile Include="CookieHelper.cs" />
     <Compile Include="DBHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

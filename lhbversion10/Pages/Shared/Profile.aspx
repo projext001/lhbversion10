@@ -5,9 +5,6 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
-    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
-        <ContentTemplate>
             <center><asp:Image ID="Image4" runat="server" ImageUrl="~/Pages/Shared/user.png" Height="25%" Width="25%" /></center>
             <br />
             <br />
@@ -38,14 +35,33 @@
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="nin" ErrorMessage="National Id No Required" ValidationGroup="upro">*</asp:RequiredFieldValidator>
                     </td></tr>
             </table>
-            <asp:ValidationSummary ID="ValidationSummary1" runat="server" Font-Size="30px" ForeColor="Red" HeaderText="Please solve the errors in *" ValidationGroup="update" />
-        </ContentTemplate>
-</asp:UpdatePanel>
-<center>
+            <asp:ValidationSummary ID="ValidationSummary1" runat="server" Font-Size="30px" ForeColor="Red" HeaderText="Please solve the Highlighted Problems" ValidationGroup="update" DisplayMode="List" />
+            <center>
     <br />
     <br />
     <asp:Button ID="unlockb" runat="server" Text="Unlock Profile" OnClick="unlockb_Click"></asp:Button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:Button ID="lockb" runat="server" Text="Lock Profile" OnClick="lockb_Click"></asp:Button>
     <br />
     <asp:Button ID="updatep" runat="server" Text="Update Profile" OnClick="updatep_Click" ValidationGroup="upro"></asp:Button>
 </center>
+    <h3>PASSWORD RESET</h3>
+    <table>
+        <tr>
+            <td>Old Password</td><td><asp:TextBox ID="oldpass" runat="server"></asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Enter your Old Password" ControlToValidate="oldpass" ForeColor="Red" ValidationGroup="passreset">*</asp:RequiredFieldValidator></td>
+        </tr>
+        <tr>
+            <td>New Password</td><td><asp:TextBox ID="newpass" runat="server" MaxLength="20"></asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ErrorMessage="Enter a New Pass" ControlToValidate="newpass" ForeColor="Red" ValidationGroup="passreset">*</asp:RequiredFieldValidator>
+            <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ErrorMessage="Password hould be 1Capital &amp; Small letter each and length of  8 characters atleast" ForeColor="Red" ValidationGroup="passreset" ValidationExpression="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" ControlToValidate="newpass">*</asp:RegularExpressionValidator>
+            </td>
+        </tr>
+        <tr>
+            <td>Confirm Password</td><td><asp:TextBox ID="confpass" runat="server"></asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ErrorMessage="Please Confirm your Password" ControlToValidate="confpass" ForeColor="Red" ValidationGroup="passreset">*</asp:RequiredFieldValidator><asp:CompareValidator ID="CompareValidator1" runat="server" ErrorMessage="New Password and Confirm Password must match" ControlToCompare="oldpass" ControlToValidate="confpass" ForeColor="Red" ValidationGroup="passreset">*</asp:CompareValidator></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <asp:ValidationSummary ID="ValidationSummary2" runat="server" ValidationGroup="passreset" DisplayMode="List" Font-Size="20px" ForeColor="Red" HeaderText="Please Solve the Highlighted Problem" />
+                <asp:Label ID="Label1" runat="server" BorderColor="#FF6666" BorderStyle="Solid" ForeColor="#000099" Visible="False"></asp:Label>
+                <br /><br />
+                <center><asp:Button ID="rstpass" runat="server" Text="Reset Password" OnClick="rstpass_Click" ValidationGroup="passreset" /></center></td>
+        </tr>
+    </table>
 </asp:Content>
