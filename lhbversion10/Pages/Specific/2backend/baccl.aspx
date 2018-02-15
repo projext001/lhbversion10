@@ -13,4 +13,5 @@
         </Columns>
     </asp:GridView>
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:WebDBConnectionString %>" SelectCommand="SELECT * FROM [Accounting] ORDER BY [Type], [Transactio_Date]"></asp:SqlDataSource>
+    <br />
     </asp:Content>
