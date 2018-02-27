@@ -19,7 +19,7 @@ namespace lhbversion10.Pages.Specific._2backend
             {
                 v.PageAcc(a, Convert.ToInt32(c["Ac"].ToString()));
             }
-            else { Server.Transfer("~/Login.aspx"); }
+            else { Server.Transfer("~/Pages/Shared/Login.aspx"); }
 
         }
         protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
