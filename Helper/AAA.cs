@@ -8,12 +8,13 @@ using System.Threading.Tasks;
 
 namespace Helper
 {
-    class AAA
+    public class AAA
     {
         String id;
         SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["WebDBConnectionString"].ToString());
         SqlDataReader dr;
         String ins, upd;
+        public AAA() { }
         public AAA(String a)
         {
             id = a;
@@ -46,8 +47,18 @@ namespace Helper
         }
 
         //Mark Activity
-        public void Activity(String actType)
+        public void Activity(String ida,String activity)
         {
+            SqlCommand command2 = new SqlCommand();
+            command2.CommandText = "Insert into [ActivityLogs]([User_Id],[Activity],[date],[time]) values(@a,@b,@c,@d)";
+            command2.Parameters.AddWithValue("@a", ida);
+            command2.Parameters.AddWithValue("@b", activity);
+            command2.Parameters.AddWithValue("@c", DateTime.Now.Date);
+            command2.Parameters.AddWithValue("@d", DateTime.Now.TimeOfDay);
+            command2.Connection = conn;
+            conn.Open();
+            int i = command2.ExecuteNonQuery();
+            conn.Close();
         }
 
         //Mark Exit
@@ -56,6 +67,7 @@ namespace Helper
             SqlCommand command1 = new SqlCommand();
             command1.CommandText = "UPDATE [Attendance] SET OUT_Time="+DateTime.Now.TimeOfDay+"where (Id='"+id+" and Date="+DateTime.Now.Date+")";
             command1.Connection = conn;
+            conn.Open();
             int i = command1.ExecuteNonQuery();
         }
     }

@@ -14,5 +14,18 @@ namespace lhbversion10.Pages.Specific._0pos
         {
 
         }
+
+        protected void cc_Click(object sender, EventArgs e)
+        {
+            DBHelper dbh = new DBHelper();
+            if (dbh.ccn(Name.Text.ToString(),add1.Text.ToString(),add2.Text.ToString(),Contact.Text.ToString()) == true)
+            {
+                Label1.Text = "Customer added Successfully";
+            }
+            else
+            {
+                Label1.Text = "Error Occured!,Please Try Again";
+            }
+        }
     }
 }

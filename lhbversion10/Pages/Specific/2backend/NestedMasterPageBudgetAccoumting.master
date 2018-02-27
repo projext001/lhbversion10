@@ -1,0 +1,19 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Pages/Specific/2backend/Site4.Master" AutoEventWireup="true" CodeBehind="NestedMasterPageBudgetAccoumting.master.cs" Inherits="lhbversion10.Pages.Specific._2backend.NestedMasterPageBudgetAccoumting" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="body" runat="server">
+        <table>
+        <tr>
+            <td style="width:15%" valign="top">
+                <ul>
+                    <li><a href="">Normal Budget</a></li>
+                    <li><a href="">Marketing Budget</a></li>
+                    <li><a href="">Accounting</a></li>
+                </ul>
+            </td>
+            <td style="width:85%">
+                <asp:ContentPlaceHolder ID="innerbody" runat="server"></asp:ContentPlaceHolder>
+            </td>
+        </tr>
+    </table>
+</asp:Content>

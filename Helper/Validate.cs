@@ -19,6 +19,8 @@ namespace Helper
                 AAA l = new AAA(t.Item3.ToString());
                 l.Attendance();
                 ch.CreateCookie(t.Item3,t.Item2);
+                AAA log = new AAA();
+                log.Activity(t.Item3.ToString(), "Login");
                 HttpContext.Current.Response.Cookies.Add(ch.GetCookie());
                 if (z == 1) { HttpContext.Current.Response.Redirect("~/Pages/Specific/0pos/phome.aspx"); }
                 if (z == 2) { HttpContext.Current.Response.Redirect("~/Pages/Specific/1manager/mhome.aspx"); }

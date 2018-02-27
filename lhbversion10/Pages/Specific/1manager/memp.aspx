@@ -9,10 +9,10 @@
                 <asp:BoundField DataField="Id" HeaderText="Id" ReadOnly="True" SortExpression="Id" InsertVisible="False" />
                 <asp:BoundField DataField="acl" HeaderText="acl" SortExpression="acl" />
                 <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" />
-                <asp:BoundField DataField="Address1" HeaderText="Address" SortExpression="Address1" />
-                <asp:BoundField DataField="Address2" HeaderText="" SortExpression="Address2" />
+                <asp:BoundField DataField="Address1" HeaderText="Address1" SortExpression="Address1" />
                 <asp:BoundField DataField="Mobile_No" HeaderText="Mobile_No" SortExpression="Mobile_No" />
-                <asp:CommandField ShowSelectButton="True" />
+                <asp:BoundField DataField="National_Id_Type" HeaderText="National_Id_Type" SortExpression="National_Id_Type" />
+                <asp:BoundField DataField="National_Id_No" HeaderText="National_Id_No" SortExpression="National_Id_No" />
             </Columns>
             <FooterStyle BackColor="#CCCCCC" />
             <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
@@ -132,6 +132,6 @@
         <br />
     </asp:Panel>
         </td></tr></table>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:WebDBConnectionString %>" SelectCommand="SELECT [Id], [acl], [Name], [Address1], [Mobile_No], [Address2] FROM [User]"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:WebDBConnectionString %>" SelectCommand="SELECT [Id], [acl], [Name], [Address1], [Mobile_No], [National_Id_Type], [National_Id_No] FROM [User]"></asp:SqlDataSource>
     <br />
     </asp:Content>

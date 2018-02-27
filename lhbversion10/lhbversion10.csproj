@@ -71,6 +71,7 @@
     <Content Include="error.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Home.png" />
+    <Content Include="Pages\Shared\customer.png" />
     <Content Include="Pages\Shared\error.aspx" />
     <Content Include="Pages\Shared\Profile.aspx" />
     <Content Include="Pages\Shared\Site1.Master" />
@@ -79,6 +80,7 @@
     <Content Include="Pages\Specific\0pos\pnb.aspx" />
     <Content Include="Pages\Specific\0pos\pnc.aspx" />
     <Content Include="Pages\Specific\0pos\Site2.Master" />
+    <Content Include="Pages\Specific\1manager\mac.aspx" />
     <Content Include="Pages\Specific\1manager\mdc.aspx" />
     <Content Include="Pages\Specific\1manager\memp.aspx" />
     <Content Include="Pages\Specific\1manager\mhome.aspx" />
@@ -88,12 +90,16 @@
     <Content Include="Pages\Specific\1manager\mvb.aspx" />
     <Content Include="Pages\Specific\1manager\play.png" />
     <Content Include="Pages\Specific\1manager\Site3.Master" />
+    <Content Include="Pages\Specific\2backend\bacl.aspx" />
     <Content Include="Pages\Specific\2backend\bdel.aspx" />
     <Content Include="Pages\Specific\2backend\bhome.aspx" />
+    <Content Include="Pages\Specific\2backend\bmb.aspx" />
+    <Content Include="Pages\Specific\2backend\bnb.aspx" />
     <Content Include="Pages\Specific\2backend\play.png" />
     <Content Include="Pages\Specific\2backend\Site4.Master" />
     <Content Include="Pages\Specific\1manager\NestedMasterPageBill.master" />
     <Content Include="Pages\Specific\1manager\NestedMasterPageCustomer.master" />
+    <Content Include="Pages\Specific\2backend\NestedMasterPageBudgetAccoumting.master" />
     <None Include="Properties\PublishProfiles\Panini.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -205,6 +211,13 @@
     <Compile Include="Pages\Specific\0pos\Site2.Master.designer.cs">
       <DependentUpon>Site2.Master</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Specific\1manager\mac.aspx.cs">
+      <DependentUpon>mac.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Specific\1manager\mac.aspx.designer.cs">
+      <DependentUpon>mac.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Specific\1manager\mdc.aspx.cs">
       <DependentUpon>mdc.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -275,6 +288,13 @@
     <Compile Include="Pages\Specific\1manager\Site3.Master.designer.cs">
       <DependentUpon>Site3.Master</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Specific\2backend\bacl.aspx.cs">
+      <DependentUpon>bacl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Specific\2backend\bacl.aspx.designer.cs">
+      <DependentUpon>bacl.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Specific\2backend\bdel.aspx.cs">
       <DependentUpon>bdel.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -289,6 +309,27 @@
     <Compile Include="Pages\Specific\2backend\bhome.aspx.designer.cs">
       <DependentUpon>bhome.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Specific\2backend\bmb.aspx.cs">
+      <DependentUpon>bmb.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Specific\2backend\bmb.aspx.designer.cs">
+      <DependentUpon>bmb.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Specific\2backend\bnb.aspx.cs">
+      <DependentUpon>bnb.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Specific\2backend\bnb.aspx.designer.cs">
+      <DependentUpon>bnb.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Specific\2backend\NestedMasterPageBudgetAccoumting.master.cs">
+      <DependentUpon>NestedMasterPageBudgetAccoumting.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Specific\2backend\NestedMasterPageBudgetAccoumting.master.designer.cs">
+      <DependentUpon>NestedMasterPageBudgetAccoumting.master</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Specific\2backend\Site4.Master.cs">
       <DependentUpon>Site4.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -298,7 +339,9 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="a\" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Helper\Helper.csproj">
       <Project>{11a886f4-ad67-4bb8-95ea-d4b720f0f779}</Project>

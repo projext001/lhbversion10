@@ -26,6 +26,8 @@
 
         <div class="contentmaster">
             <asp:ContentPlaceHolder ID="body" runat="server">
+                <asp:ScriptManager ID="ScriptManager1" runat="server">
+                </asp:ScriptManager>
             </asp:ContentPlaceHolder>
         </div>
 

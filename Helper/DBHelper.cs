@@ -152,5 +152,55 @@ namespace Helper
             }
             else { return false; }
         }
+        //add new normal customer
+        public Boolean ccn(String name, String add1, String add2,String cont)
+        {
+            try
+            {
+                string insert = "Insert Into[CustN]([Name],[Address1],[Address2],[Contact],[Type]) values(@a ,@b ,@c, @d,@e)";
+                SqlCommand command = new SqlCommand(insert, conn);
+                command.Parameters.AddWithValue("@a", name);
+                command.Parameters.AddWithValue("@b", add1);
+                command.Parameters.AddWithValue("@c", add2);
+                command.Parameters.AddWithValue("@d", cont);
+                command.Parameters.AddWithValue("@e", "normal");
+                conn.Open();
+                int i = command.ExecuteNonQuery();
+                conn.Close();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.Write(ex);
+                conn.Close();
+                return false;
+            }
+        }
+        //add new business customer
+        public Boolean ccn(String name, String add1, String add2, String cont,String gst,String hn)
+        {
+            try
+            {
+                string insert = "Insert Into[CustN]([CompanyName],[Address1],[Address2],[contactno],[gstno],[HName],[Type]) values(@a ,@b ,@c, @d,@e ,@f ,@g)";
+                SqlCommand command = new SqlCommand(insert, conn);
+                command.Parameters.AddWithValue("@a", name);
+                command.Parameters.AddWithValue("@b", add1);
+                command.Parameters.AddWithValue("@c", add2);
+                command.Parameters.AddWithValue("@d", cont);
+                command.Parameters.AddWithValue("@d", gst);
+                command.Parameters.AddWithValue("@d", hn);
+                command.Parameters.AddWithValue("@d", "business");
+                conn.Open();
+                int i = command.ExecuteNonQuery();
+                conn.Close();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.Write(ex);
+                conn.Close();
+                return false;
+            }
+        }
     }
 }
