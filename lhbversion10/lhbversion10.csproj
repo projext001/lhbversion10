@@ -93,6 +93,7 @@
     <Content Include="Pages\Specific\2backend\bacl.aspx" />
     <Content Include="Pages\Specific\2backend\bdel.aspx" />
     <Content Include="Pages\Specific\2backend\bhome.aspx" />
+    <Content Include="Pages\Specific\2backend\bled.aspx" />
     <Content Include="Pages\Specific\2backend\bmb.aspx" />
     <Content Include="Pages\Specific\2backend\bnb.aspx" />
     <Content Include="Pages\Specific\2backend\play.png" />
@@ -308,6 +309,13 @@
     </Compile>
     <Compile Include="Pages\Specific\2backend\bhome.aspx.designer.cs">
       <DependentUpon>bhome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Specific\2backend\bled.aspx.cs">
+      <DependentUpon>bled.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Specific\2backend\bled.aspx.designer.cs">
+      <DependentUpon>bled.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Specific\2backend\bmb.aspx.cs">
       <DependentUpon>bmb.aspx</DependentUpon>

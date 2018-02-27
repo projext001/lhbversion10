@@ -13,5 +13,10 @@ namespace lhbversion10.Pages.Specific._2backend
         {
 
         }
+
+        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
