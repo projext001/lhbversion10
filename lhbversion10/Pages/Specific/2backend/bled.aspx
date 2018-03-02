@@ -46,19 +46,19 @@
         </tr>
         <tr>
             <td align="right">
-                <asp:DataList ID="DataList1" runat="server" DataSourceID="SqlDataSource3">
+                <asp:DataList ID="DataList5" runat="server" DataSourceID="SqlDataSource3">
                     <ItemTemplate>
-                        Column1:
-                        <asp:Label ID="Column1Label" runat="server" Text='<%# Eval("Column1") %>' />
+                        TOTAL:
+                        <asp:Label ID="TOTALLabel" runat="server" Text='<%# Eval("TOTAL") %>' />
                         <br />
 <br />
                     </ItemTemplate>
                 </asp:DataList>
             </td><td align="right">
-                <asp:DataList ID="DataList2" runat="server" DataSourceID="SqlDataSource4">
+                <asp:DataList ID="DataList6" runat="server" DataSourceID="SqlDataSource4">
                     <ItemTemplate>
-                        Column1:
-                        <asp:Label ID="Column1Label" runat="server" Text='<%# Eval("Column1") %>' />
+                        TOTAL:
+                        <asp:Label ID="TOTALLabel" runat="server" Text='<%# Eval("TOTAL") %>' />
                         <br />
 <br />
                     </ItemTemplate>
@@ -93,45 +93,45 @@
     </asp:Calendar>
         </td></tr>
     </table>
-                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:WebDBConnectionString %>" SelectCommand="SELECT [Id], [date], [gdesc], [amt] FROM [acbusiness] WHERE ([gto] = @gto) AND (Transaction_Date &gt;= @FromD AND Transaction_Date &lt;= @ToD)">
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:WebDBConnectionString %>" SelectCommand="SELECT [Id], [date], [gdesc], [amt] FROM [acbusiness] WHERE ([gto] = @gto) AND (date &gt;= @FromD AND date &lt;= @ToD)">
                     <SelectParameters>
-                        <asp:ControlParameter ControlID="DropDownList1" Name="gto" PropertyName="SelectedValue" Type="Int32" />
+                        <asp:ControlParameter ControlID="DropDownList1" Name="gto" PropertyName="SelectedValue" Type="Int32" DefaultValue="1000" />
                         <asp:ControlParameter ControlID="Calendar1" Name="FromD" PropertyName="SelectedDate" />
                         <asp:ControlParameter ControlID="Calendar2" Name="ToD" PropertyName="SelectedDate" />
                     </SelectParameters>
                 </asp:SqlDataSource>
-                <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:WebDBConnectionString %>" SelectCommand="SELECT [Id], [date], [gdesc], [amt] FROM [acbusiness] WHERE ([gfrom] = @gfrom) AND (Transaction_Date &gt;= @FromD AND Transaction_Date &lt;= @ToD)">
+                <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:WebDBConnectionString %>" SelectCommand="SELECT [Id], [date], [gdesc], [amt] FROM [acbusiness] WHERE ([gfrom] = @gfrom) AND (date &gt;= @FromD AND date &lt;= @ToD)">
                     <SelectParameters>
-                        <asp:ControlParameter ControlID="DropDownList1" Name="gfrom" PropertyName="SelectedValue" Type="Int32" />
+                        <asp:ControlParameter ControlID="DropDownList1" Name="gfrom" PropertyName="SelectedValue" Type="Int32" DefaultValue="1000" />
                         <asp:ControlParameter ControlID="Calendar1" Name="FromD" PropertyName="SelectedDate" />
                         <asp:ControlParameter ControlID="Calendar2" Name="ToD" PropertyName="SelectedDate" />
                     </SelectParameters>
                 </asp:SqlDataSource>
 <asp:SqlDataSource ID="SqlDataSource7" runat="server" ConnectionString="<%$ ConnectionStrings:WebDBConnectionString %>" SelectCommand="SELECT [Id], [CompanyName] FROM [CustB]"></asp:SqlDataSource>
-            <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:WebDBConnectionString %>" SelectCommand="SELECT SUM(Amount) FROM Accounting1 WHERE (Transaction_Date &gt;= @FromD AND Transaction_Date &lt;= @ToD) AND ([gto] = @gto)">
+            <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:WebDBConnectionString %>" SelectCommand="SELECT SUM(Amount) AS TOTAL FROM Accounting1 WHERE (Transaction_Date &gt;= @FromD AND Transaction_Date &lt;= @ToD) AND ([F_ROM] = @gto)">
                 <SelectParameters>
                     <asp:ControlParameter ControlID="Calendar1" DefaultValue="" Name="FromD" PropertyName="SelectedDate" />
                     <asp:ControlParameter ControlID="Calendar2" DefaultValue="" Name="ToD" PropertyName="SelectedDate" />
-                    <asp:ControlParameter ControlID="DataList1" Name="gto" PropertyName="SelectedValue" />
+                    <asp:ControlParameter ControlID="DropDownList1" Name="gto" PropertyName="SelectedValue" DefaultValue="1000" />
                 </SelectParameters>
             </asp:SqlDataSource>
-            <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:WebDBConnectionString %>" SelectCommand="SELECT SUM(Amount) FROM Accounting WHERE (Transaction_Date &gt;= @FromD AND Transaction_Date &lt;= @ToD) AND ([gfrom] = @gfrom)">
+            <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:WebDBConnectionString %>" SelectCommand="SELECT SUM(Amount) AS TOTAL FROM Accounting WHERE (Transaction_Date &gt;= @FromD AND Transaction_Date &lt;= @ToD) AND ([T_O] = @gfrom)">
                 <SelectParameters>
                     <asp:ControlParameter ControlID="Calendar1" DefaultValue="" Name="FromD" PropertyName="SelectedDate" />
                     <asp:ControlParameter ControlID="Calendar2" DefaultValue="" Name="ToD" PropertyName="SelectedDate" />
-                    <asp:ControlParameter ControlID="DataList1" Name="gfrom" PropertyName="SelectedValue" />
+                    <asp:ControlParameter ControlID="DropDownList1" Name="gfrom" PropertyName="SelectedValue" DefaultValue="1000" />
                 </SelectParameters>
             </asp:SqlDataSource>
-    <asp:SqlDataSource ID="SqlDataSource5" runat="server" ConnectionString="<%$ ConnectionStrings:WebDBConnectionString %>" SelectCommand="SELECT SUM(Amount) AS CARRIED_FORWARD FROM Accounting1 WHERE (Transaction_Date &lt; @FromD) AND ([gto] = @gto)">
+    <asp:SqlDataSource ID="SqlDataSource5" runat="server" ConnectionString="<%$ ConnectionStrings:WebDBConnectionString %>" SelectCommand="SELECT SUM(Amount) AS CARRIED_FORWARD FROM Accounting1 WHERE (Transaction_Date &lt; @FromD) AND ([F_ROM] = @gto)">
         <SelectParameters>
             <asp:ControlParameter ControlID="Calendar1" Name="FromD" PropertyName="SelectedDate" />
-            <asp:ControlParameter ControlID="DataList1" Name="gto" PropertyName="SelectedValue" />
+            <asp:ControlParameter ControlID="DropDownList1" Name="gto" PropertyName="SelectedValue" DefaultValue="1000" />
         </SelectParameters>
 </asp:SqlDataSource>
-<asp:SqlDataSource ID="SqlDataSource6" runat="server" ConnectionString="<%$ ConnectionStrings:WebDBConnectionString %>" SelectCommand="SELECT SUM(Amount) AS CARRIED_FORWARD FROM Accounting WHERE (Transaction_Date &lt; @FromD) AND ([gfrom] = @gfrom)">
+<asp:SqlDataSource ID="SqlDataSource6" runat="server" ConnectionString="<%$ ConnectionStrings:WebDBConnectionString %>" SelectCommand="SELECT SUM(Amount) AS CARRIED_FORWARD FROM Accounting WHERE (Transaction_Date &lt; @FromD) AND ([T_O] = @gfrom)">
     <SelectParameters>
         <asp:ControlParameter ControlID="Calendar1" Name="FromD" PropertyName="SelectedDate" />
-        <asp:ControlParameter ControlID="DataList1" Name="gfrom" PropertyName="SelectedValue" />
+        <asp:ControlParameter ControlID="DropDownList1" Name="gfrom" PropertyName="SelectedValue" DefaultValue="1000" />
     </SelectParameters>
 </asp:SqlDataSource>
     </asp:Content>

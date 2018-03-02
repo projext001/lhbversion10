@@ -18,7 +18,7 @@
             </td></tr>
         <tr><td class="cola">Address Line 2</td><td class="colb"><asp:TextBox ID="add2" runat="server" CssClass="textc"></asp:TextBox></td></tr>
         <tr><td class="cola">Contact</td><td class="colb"><asp:TextBox ID="Contact" runat="server" CssClass="textc"></asp:TextBox>
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Enter your Mobile No" ForeColor="Red" CssClass="textc">*</asp:RequiredFieldValidator>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Enter your Mobile No" ForeColor="Red" CssClass="textc" ControlToValidate="Contact">*</asp:RequiredFieldValidator>
             <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="Contact" ErrorMessage="Enter a valid Mobile no." ForeColor="Red" ValidationExpression="^[7-9]\d{9}$">*</asp:RegularExpressionValidator>
             </td></tr>
     </table>

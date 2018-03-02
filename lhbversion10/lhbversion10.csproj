@@ -68,6 +68,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <Content Include="0Bills\transform.xsl" />
+    <Content Include="0Bills\XMLFile1.xml" />
     <Content Include="error.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Home.png" />
@@ -94,7 +96,6 @@
     <Content Include="Pages\Specific\2backend\bdel.aspx" />
     <Content Include="Pages\Specific\2backend\bhome.aspx" />
     <Content Include="Pages\Specific\2backend\bled.aspx" />
-    <Content Include="Pages\Specific\2backend\bmb.aspx" />
     <Content Include="Pages\Specific\2backend\bnb.aspx" />
     <Content Include="Pages\Specific\2backend\play.png" />
     <Content Include="Pages\Specific\2backend\Site4.Master" />
@@ -317,13 +318,6 @@
     <Compile Include="Pages\Specific\2backend\bled.aspx.designer.cs">
       <DependentUpon>bled.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Specific\2backend\bmb.aspx.cs">
-      <DependentUpon>bmb.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\Specific\2backend\bmb.aspx.designer.cs">
-      <DependentUpon>bmb.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Pages\Specific\2backend\bnb.aspx.cs">
       <DependentUpon>bnb.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -347,9 +341,7 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="a\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\Helper\Helper.csproj">
       <Project>{11a886f4-ad67-4bb8-95ea-d4b720f0f779}</Project>

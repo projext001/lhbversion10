@@ -3,4 +3,8 @@
     NEW BILL
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="body" runat="server">
+    <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Button" />
+    <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+    <div>
+    </div>
 </asp:Content>

@@ -49,22 +49,22 @@ namespace lhbversion10.Pages.Specific._2backend {
         protected global::System.Web.UI.WebControls.GridView GridView2;
         
         /// <summary>
-        /// DataList1 control.
+        /// DataList5 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DataList DataList1;
+        protected global::System.Web.UI.WebControls.DataList DataList5;
         
         /// <summary>
-        /// DataList2 control.
+        /// DataList6 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DataList DataList2;
+        protected global::System.Web.UI.WebControls.DataList DataList6;
         
         /// <summary>
         /// DropDownList1 control.

@@ -6,8 +6,7 @@
         <tr>
             <td style="width:15%" valign="top">
                 <ul>
-                    <li><a href="">Normal Budget</a></li>
-                    <li><a href="">Marketing Budget</a></li>
+                    <li><a href="bnb.aspx">Budget</a></li>
                     <li><a href="bacl.aspx">Accounting</a></li>
                     <li><a href="bled.aspx">Ledger</a></li>
                 </ul>

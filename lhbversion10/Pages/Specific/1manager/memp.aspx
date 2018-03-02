@@ -13,6 +13,7 @@
                 <asp:BoundField DataField="Mobile_No" HeaderText="Mobile_No" SortExpression="Mobile_No" />
                 <asp:BoundField DataField="National_Id_Type" HeaderText="National_Id_Type" SortExpression="National_Id_Type" />
                 <asp:BoundField DataField="National_Id_No" HeaderText="National_Id_No" SortExpression="National_Id_No" />
+                <asp:CommandField ShowSelectButton="True" />
             </Columns>
             <FooterStyle BackColor="#CCCCCC" />
             <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />

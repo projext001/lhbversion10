@@ -202,5 +202,42 @@ namespace Helper
                 return false;
             }
         }
+        public Boolean insexpenditure(String exp)
+        {
+            try
+            {
+                SqlCommand com = new SqlCommand();
+                com.CommandText = "Insert into [Expenditure_List]([ExpenditureName]) values (@a)";
+                com.Parameters.AddWithValue("@a",exp);
+                com.Connection = conn;
+                conn.Open();
+                int i = com.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
+        public Boolean insbudget(String exptype,String fdate, String tdate,String tcost)
+        {
+            try
+            {
+                SqlCommand com = new SqlCommand();
+                com.CommandText = "Insert into [Budget]([ExpenditureType],[FromDate],[ToDate],[TotalCost]) values (@a,@b,@c,@d)";
+                com.Parameters.AddWithValue("@a", exptype);
+                com.Parameters.AddWithValue("@b", fdate);
+                com.Parameters.AddWithValue("@c", tdate);
+                com.Parameters.AddWithValue("@d", tcost);
+                com.Connection = conn;
+                conn.Open();
+                int i = com.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
     }
 }
