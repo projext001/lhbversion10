@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<billing>
+  <FROM>
+    <COMPANYNAME>SELF                </COMPANYNAME>
+    <ADDRESS>88 89</ADDRESS>
+    <CONTACT>987988656    </CONTACT>
+    <GSTNO>ASDA64566                     </GSTNO>
+  </FROM>
+  <TO>
+    <CNAME>Veer                               </CNAME>
+    <CADD>Jogeshwari West</CADD>
+    <CMOB>45662          </CMOB>
+  </TO>
+  <BODY />
+</billing>

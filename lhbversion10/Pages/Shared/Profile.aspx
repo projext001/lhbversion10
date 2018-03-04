@@ -50,7 +50,6 @@
         </tr>
         <tr>
             <td>New Password</td><td><asp:TextBox ID="newpass" runat="server" MaxLength="20"></asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ErrorMessage="Enter a New Pass" ControlToValidate="newpass" ForeColor="Red" ValidationGroup="passreset">*</asp:RequiredFieldValidator>
-            <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ErrorMessage="Password hould be 1Capital &amp; Small letter each and length of  8 characters atleast" ForeColor="Red" ValidationGroup="passreset" ValidationExpression="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" ControlToValidate="newpass">*</asp:RegularExpressionValidator>
             </td>
         </tr>
         <tr>

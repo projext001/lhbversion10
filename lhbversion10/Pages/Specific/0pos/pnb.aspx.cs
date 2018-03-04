@@ -11,6 +11,7 @@ namespace lhbversion10.Pages.Specific._0pos
     public partial class pnb : System.Web.UI.Page
     {
         HttpCookie c;
+        
         protected void Page_Load(object sender, EventArgs e)
         {
             c = Request.Cookies["userInfo"];
@@ -23,9 +24,22 @@ namespace lhbversion10.Pages.Specific._0pos
         {
             c = Request.Cookies["userInfo"];
             XMLHelper xh = new XMLHelper();
-            xh.CreateXMLHelper("retail", c["Id"].ToString());
+            xh.CreateXMLHelperretail("retail", c["Id"].ToString(),DropDownList1.SelectedValue);
             Label1.Text = xh.filepath;
             Button1.Enabled = false;
+        }
+
+        protected void additem_Click(object sender, EventArgs e)
+        {
+            XMLHelper xh = new XMLHelper();
+            if (xh.addItem("10",Label1.Text.ToString())==true)
+            {
+                Label2.Text = "Item Added";
+            }
+            else
+            {
+                Label2.Text = "Error";
+            }
         }
     }
 }

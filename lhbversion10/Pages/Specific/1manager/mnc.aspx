@@ -28,8 +28,8 @@
         <asp:Label ID="Label2" runat="server" ForeColor="Red"></asp:Label>
         <table cellspacing="5" cellpadding="5" class="profiletable" border="0">
             <tr><td class="cola">Company Name</td><td class="colb">
-                <asp:TextBox ID="cname" runat="server" CssClass="textc"></asp:TextBox>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="cname" ErrorMessage="Company Name required" ForeColor="Red" ValidationGroup="ccb">*</asp:RequiredFieldValidator>
+                <asp:TextBox ID="companyname" runat="server" CssClass="textc"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="companyname" ErrorMessage="Company Name required" ForeColor="Red" ValidationGroup="ccb">*</asp:RequiredFieldValidator>
                 </td></tr>
             <tr><td class="cola">Address Line 1</td><td class="colb">
                 <asp:TextBox ID="cadd1" runat="server" CssClass="textc"></asp:TextBox>
@@ -41,11 +41,10 @@
             <tr><td class="cola">Mobile No</td><td class="colb">
                 <asp:TextBox ID="cmob" runat="server" CssClass="textc"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="cmob" ErrorMessage="Mobile No. Required" ForeColor="Red" ValidationGroup="ccb">*</asp:RequiredFieldValidator>
-                <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="cmob" ErrorMessage="Enter a valid Mobile No." ForeColor="Red" ValidationGroup="ccb">*</asp:RegularExpressionValidator>
                 </td></tr>
             <tr><td class="cola">Owner/CEO Name</td><td class="colb">
-                <asp:TextBox ID="coname" runat="server" CssClass="textc"></asp:TextBox>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ErrorMessage="Owner or CEO Name Required" ForeColor="Red" ValidationGroup="ccb" ControlToValidate="coname">*</asp:RequiredFieldValidator>
+                <asp:TextBox ID="cownername" runat="server" CssClass="textc"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ErrorMessage="Owner or CEO Name Required" ForeColor="Red" ValidationGroup="ccb" ControlToValidate="cownername">*</asp:RequiredFieldValidator>
                 </td></tr>
             <tr><td class="cola">GST No.</td><td class="colb">
                 <asp:TextBox ID="gst" runat="server" CssClass="textc"></asp:TextBox>

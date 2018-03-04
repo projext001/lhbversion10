@@ -130,13 +130,13 @@ namespace lhbversion10.Pages.Specific._1manager {
         protected global::System.Web.UI.WebControls.Label Label2;
         
         /// <summary>
-        /// cname control.
+        /// companyname control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox cname;
+        protected global::System.Web.UI.WebControls.TextBox companyname;
         
         /// <summary>
         /// RequiredFieldValidator4 control.
@@ -193,22 +193,13 @@ namespace lhbversion10.Pages.Specific._1manager {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator7;
         
         /// <summary>
-        /// RegularExpressionValidator2 control.
+        /// cownername control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator2;
-        
-        /// <summary>
-        /// coname control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox coname;
+        protected global::System.Web.UI.WebControls.TextBox cownername;
         
         /// <summary>
         /// RequiredFieldValidator8 control.

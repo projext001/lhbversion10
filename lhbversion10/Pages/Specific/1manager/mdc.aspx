@@ -4,7 +4,8 @@
     <p>
         Normal Customers</p>
     <p>
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSource1" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSource1" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" CellPadding="4" ForeColor="#333333" GridLines="None">
+            <AlternatingRowStyle BackColor="White" />
             <Columns>
                 <asp:BoundField DataField="Id" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="Id" />
                 <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" />
@@ -13,6 +14,16 @@
                 <asp:BoundField DataField="Contact" HeaderText="Contact" SortExpression="Contact" />
                 <asp:CommandField ShowSelectButton="True" />
             </Columns>
+            <EditRowStyle BackColor="#2461BF" />
+            <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+            <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+            <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+            <RowStyle BackColor="#EFF3FB" />
+            <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+            <SortedAscendingCellStyle BackColor="#F5F7FB" />
+            <SortedAscendingHeaderStyle BackColor="#6D95E1" />
+            <SortedDescendingCellStyle BackColor="#E9EBEF" />
+            <SortedDescendingHeaderStyle BackColor="#4870BE" />
         </asp:GridView>
     </p>
         <p>
@@ -24,7 +35,7 @@
             <asp:Label ID="Notice" runat="server"></asp:Label>
         </p>
         <p>
-            <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="DELETE" ValidationGroup="nc" />
+            <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="DELETE" ValidationGroup="nc" style="height: 26px" />
         </p>
         </asp:Panel>
     <br />
@@ -33,7 +44,8 @@
     <p>
         Business Customers</p>
     <p>
-        <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSource2" OnSelectedIndexChanged="GridView2_SelectedIndexChanged">
+        <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSource2" OnSelectedIndexChanged="GridView2_SelectedIndexChanged" CellPadding="4" ForeColor="#333333" GridLines="None">
+            <AlternatingRowStyle BackColor="White" />
             <Columns>
                 <asp:BoundField DataField="Id" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="Id" />
                 <asp:BoundField DataField="CompanyName" HeaderText="CompanyName" SortExpression="CompanyName" />
@@ -42,14 +54,22 @@
                 <asp:BoundField DataField="contactno" HeaderText="contactno" SortExpression="contactno" />
                 <asp:BoundField DataField="gstno" HeaderText="gstno" SortExpression="gstno" />
                 <asp:BoundField DataField="HName" HeaderText="HName" SortExpression="HName" />
-                <asp:CommandField ShowSelectButton="True" />
+                <asp:BoundField DataField="Type" HeaderText="Type" SortExpression="Type" />
             </Columns>
+            <EditRowStyle BackColor="#7C6F57" />
+            <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
+            <HeaderStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
+            <PagerStyle BackColor="#666666" ForeColor="White" HorizontalAlign="Center" />
+            <RowStyle BackColor="#E3EAEB" />
+            <SelectedRowStyle BackColor="#C5BBAF" Font-Bold="True" ForeColor="#333333" />
+            <SortedAscendingCellStyle BackColor="#F8FAFA" />
+            <SortedAscendingHeaderStyle BackColor="#246B61" />
+            <SortedDescendingCellStyle BackColor="#D4DFE1" />
+            <SortedDescendingHeaderStyle BackColor="#15524A" />
         </asp:GridView>
     </p>
         <p>
-            <asp:DropDownList ID="DropDownList2" runat="server">
-            </asp:DropDownList>
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="DropDownList2" ErrorMessage="Select a Id to Delete" ForeColor="#FF3300" ValidationGroup="bc"></asp:RequiredFieldValidator>
+            <asp:Label ID="Label1" runat="server" BackColor="Red" ForeColor="White"></asp:Label>
         </p>
         <p>
             <asp:Label ID="Notice0" runat="server"></asp:Label>

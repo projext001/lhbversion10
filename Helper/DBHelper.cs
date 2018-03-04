@@ -157,7 +157,7 @@ namespace Helper
         {
             try
             {
-                string insert = "Insert Into[CustN]([Name],[Address1],[Address2],[Contact],[Type]) values(@a ,@b ,@c, @d,@e)";
+                string insert = "Insert Into [CustN]([Name],[Address1],[Address2],[Contact],[Type]) values(@a ,@b ,@c, @d,@e)";
                 SqlCommand command = new SqlCommand(insert, conn);
                 command.Parameters.AddWithValue("@a", name);
                 command.Parameters.AddWithValue("@b", add1);
@@ -177,19 +177,19 @@ namespace Helper
             }
         }
         //add new business customer
-        public Boolean ccn(String name, String add1, String add2, String cont,String gst,String hn)
+        public Boolean ccnbusiness(String name, String add1, String add2, String cont,String gst,String hn)
         {
             try
             {
-                string insert = "Insert Into[CustN]([CompanyName],[Address1],[Address2],[contactno],[gstno],[HName],[Type]) values(@a ,@b ,@c, @d,@e ,@f ,@g)";
+                string insert = "INSERT INTO [CustB]([CompanyName],[Address1],[Address2],[contactno],[gstno],[HName],[Type]) VALUES (@a,@b,@c,@d,@e,@f,@g)";
                 SqlCommand command = new SqlCommand(insert, conn);
                 command.Parameters.AddWithValue("@a", name);
                 command.Parameters.AddWithValue("@b", add1);
                 command.Parameters.AddWithValue("@c", add2);
                 command.Parameters.AddWithValue("@d", cont);
-                command.Parameters.AddWithValue("@d", gst);
-                command.Parameters.AddWithValue("@d", hn);
-                command.Parameters.AddWithValue("@d", "business");
+                command.Parameters.AddWithValue("@e", gst);
+                command.Parameters.AddWithValue("@f", hn);
+                command.Parameters.AddWithValue("@g", "business");
                 conn.Open();
                 int i = command.ExecuteNonQuery();
                 conn.Close();

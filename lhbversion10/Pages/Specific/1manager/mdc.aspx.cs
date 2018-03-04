@@ -28,7 +28,7 @@ namespace lhbversion10.Pages.Specific._1manager
         {
             GridViewRow r = GridView2.SelectedRow;
             string a = r.Cells[0].Text.ToString();
-            DropDownList2.Items.Insert(DropDownList2.Items.Count, new ListItem(a, a));
+            Label1.Text = a;
 
         }
 
@@ -36,6 +36,7 @@ namespace lhbversion10.Pages.Specific._1manager
         {
             Notice.Text = "";
             Notice0.Text = "";
+            Label1.Text = "";
         }
 
         protected void Button2_Click(object sender, EventArgs e)
@@ -48,10 +49,12 @@ namespace lhbversion10.Pages.Specific._1manager
 
         protected void Button3_Click(object sender, EventArgs e)
         {
-            Boolean b = dbh.del("CustB", DropDownList2.SelectedItem.Value.ToString());
-            if (b == true) { Notice0.Text = "Deletion Successfull"; }
-            else { Notice0.Text = "Failed to DELETE"; }
-            GridView2.DataBind();
+            if (Label1.Text!=null) {
+                Boolean b = dbh.del("CustB", Label1.Text.ToString());
+                if (b == true) { Notice0.Text = "Deletion Successfull"; }
+                else { Notice0.Text = "Failed to DELETE"; }
+                GridView2.DataBind(); }
+            else { Notice0.Text = "Select a value from the above Grid"; }
         }
     }
 }

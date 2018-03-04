@@ -37,7 +37,7 @@ namespace lhbversion10.Pages.Specific._1manager
         protected void Button1_Click(object sender, EventArgs e)
         {
             DBHelper dbh = new DBHelper();
-            if (dbh.ccn(cname.Text.ToString(), cadd1.Text.ToString(), cadd2.Text.ToString(), cmob.Text.ToString(),gst.Text.ToString(),coname.Text.ToString()) == true)
+            if (dbh.ccnbusiness(companyname.Text.ToString(), cadd1.Text.ToString(), cadd2.Text.ToString(), cmob.Text.ToString(),gst.Text.ToString(),cownername.Text.ToString()) == true)
             {
                 Label2.Text = "Customer added Successfully";
             }
