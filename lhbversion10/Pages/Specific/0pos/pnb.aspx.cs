@@ -15,11 +15,13 @@ namespace lhbversion10.Pages.Specific._0pos
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            /*if (!Page.IsPostBack)
+            if (!Page.IsPostBack)
             {
-                SetInitialRow();
-            }*/
-            ADD1.Visible = true;
+                ADD1.Visible = false;
+                TextBox2.Visible = false;
+                Label9.Visible = false;
+            }
+            
         }
         private void SetInitialRow()
         {
@@ -132,12 +134,17 @@ namespace lhbversion10.Pages.Specific._0pos
         {
             SetInitialRow();
             ADD0.Visible = false;
+            TextBox1.Visible = false;
+            Label8.Visible = false;
             ADD1.Visible = true;
+            TextBox2.Visible = true;
+            Label9.Visible = true;
         }
 
         protected void ADD1_Click(object sender, EventArgs e)
         {
             AddNewRowToGrid();
+            TextBox2.Text = String.Empty;
         }
     }
 }

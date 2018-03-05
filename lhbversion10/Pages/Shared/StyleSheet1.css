@@ -100,3 +100,22 @@ li a:hover:not(.active) {
     font-family: Centaur;
     background-color: #43b12f;
 }
+.bill{
+    width:210mm;
+    max-height:297mm;
+}
+.billto {
+    width: 210mm;
+    height: auto;
+    font-family: "Times New Roman", Times, serif;
+    font-size:20px;
+    font-weight:bold;
+}
+.billBody {
+    width: 210mm;
+    height: auto;
+}
+.billfoot{
+    float:right;
+    width:30mm;
+}
