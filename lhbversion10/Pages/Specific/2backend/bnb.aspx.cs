@@ -36,7 +36,7 @@ namespace lhbversion10.Pages.Specific._2backend
 
         protected void addbudget_Click(object sender, EventArgs e)
         {
-            Boolean b = d.insbudget(DropDownList1.SelectedValue.ToString(),fromdate.ToString(),todate.ToString(),amt.ToString());
+            Boolean b = d.insbudget(DropDownList1.SelectedValue.ToString(),Convert.ToDateTime(fromdate.Text.ToString()), Convert.ToDateTime(todate.Text.ToString()), amt.ToString());
             if (b == true)
             {
                 GridView2.DataBind();

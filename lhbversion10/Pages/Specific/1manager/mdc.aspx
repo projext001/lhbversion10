@@ -55,6 +55,7 @@
                 <asp:BoundField DataField="gstno" HeaderText="gstno" SortExpression="gstno" />
                 <asp:BoundField DataField="HName" HeaderText="HName" SortExpression="HName" />
                 <asp:BoundField DataField="Type" HeaderText="Type" SortExpression="Type" />
+                <asp:CommandField ShowSelectButton="True" />
             </Columns>
             <EditRowStyle BackColor="#7C6F57" />
             <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />

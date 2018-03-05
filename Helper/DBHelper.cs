@@ -219,7 +219,7 @@ namespace Helper
                 return false;
             }
         }
-        public Boolean insbudget(String exptype,String fdate, String tdate,String tcost)
+        public Boolean insbudget(String exptype,DateTime fdate, DateTime tdate,String tcost)
         {
             try
             {
@@ -238,6 +238,50 @@ namespace Helper
             {
                 return false;
             }
+        }
+        public String addBill(String Name,String amt)
+        {
+            try
+            {
+                SqlCommand com = new SqlCommand();
+                com.CommandText = "Insert into [billList]([BillId],[Date],[Amt]) values (@a,@b,@c)";
+                com.Parameters.AddWithValue("@a", Name);
+                com.Parameters.AddWithValue("@b", DateTime.Now.Date);
+                com.Parameters.AddWithValue("@c", amt);
+                com.Connection = conn;
+                conn.Open();
+                int i = com.ExecuteNonQuery();
+                conn.Close();
+                return "true";
+            }
+            catch (Exception ex)
+            {
+                conn.Close();
+                return ex.ToString();
+            }
+            
+        }
+        public String addBillBusiness(String Name, String amt)
+        {
+            try
+            {
+                SqlCommand com = new SqlCommand();
+                com.CommandText = "Insert into [billListBusiness]([BillId],[Date],[Amt]) values (@a,@b,@c)";
+                com.Parameters.AddWithValue("@a", Name);
+                com.Parameters.AddWithValue("@b", DateTime.Now.Date);
+                com.Parameters.AddWithValue("@c", amt);
+                com.Connection = conn;
+                conn.Open();
+                int i = com.ExecuteNonQuery();
+                conn.Close();
+                return "true";
+            }
+            catch (Exception ex)
+            {
+                conn.Close();
+                return ex.ToString();
+            }
+
         }
     }
 }
