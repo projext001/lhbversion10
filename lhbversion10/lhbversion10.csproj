@@ -68,8 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <Content Include="0Bills\transform.xsl" />
-    <Content Include="0Bills\XMLFile1.xml" />
+    <Content Include="0Bills\test.xml" />
     <Content Include="error.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Home.png" />

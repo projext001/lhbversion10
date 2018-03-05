@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<billing>
+
+  <bitem>
+    <ProductId>10</ProductId>
+    <ProductDesc>key</ProductDesc>
+    <ProductBatch>ABC</ProductBatch>
+    <ProductSerial>100</ProductSerial>
+    <ProductType>A</ProductType>
+    <ProductTaxCGSTandSGST>9,9</ProductTaxCGSTandSGST>
+    <ProductCost>100</ProductCost>
+  </bitem>
+  <bitem>
+    <ProductId>11</ProductId>
+    <ProductDesc>key</ProductDesc>
+    <ProductBatch>ABC</ProductBatch>
+    <ProductSerial>100</ProductSerial>
+    <ProductType>A</ProductType>
+    <ProductTaxCGSTandSGST>9,9</ProductTaxCGSTandSGST>
+    <ProductCost>150</ProductCost>
+  </bitem>
+  <bitem>
+    <ProductId>12</ProductId>
+    <ProductDesc>key</ProductDesc>
+    <ProductBatch>ABC</ProductBatch>
+    <ProductSerial>100</ProductSerial>
+    <ProductType>A</ProductType>
+    <ProductTaxCGSTandSGST>9,9</ProductTaxCGSTandSGST>
+    <ProductCost>200</ProductCost>
+  </bitem>
+</billing>

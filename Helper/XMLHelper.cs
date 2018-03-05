@@ -139,39 +139,6 @@ namespace Helper
                 XmlDocument doc = new XmlDocument();
                 doc.Load(filepath);
                 
-
-                XmlElement element = doc.CreateElement("BITEM");//creating element BITEM
-
-                XmlAttribute attribute0 = doc.CreateAttribute("ProductId");//creating attribute
-                attribute0.Value = proid;//giving the attribute value
-
-                XmlAttribute attribute1 = doc.CreateAttribute("ProductDesc");//creating attribute
-                attribute1.Value = prodesc;//giving the attribute value
-
-                XmlAttribute attribute2 = doc.CreateAttribute("ProductBatch");//creating attribute
-                attribute2.Value = probatch;//giving the attribute value
-
-                XmlAttribute attribute3 = doc.CreateAttribute("ProductSerial");//creating attribute
-                attribute3.Value = prodserial;//giving the attribute value
-
-                XmlAttribute attribute4 = doc.CreateAttribute("ProductType");//creating attribute
-                attribute4.Value = prodtype;//giving the attribute value
-
-                XmlAttribute attribute5 = doc.CreateAttribute("ProductTaxCGSTandSGST");//creating attribute
-                attribute5.Value = prodtax;//giving the attribute value
-
-                XmlAttribute attribute6 = doc.CreateAttribute("ProductCost");//creating attribute
-                attribute6.Value = prodcost;//giving the attribute value
-
-                //giving attribute to the element
-                element.Attributes.Append(attribute0);
-                element.Attributes.Append(attribute1);
-                element.Attributes.Append(attribute2);
-                element.Attributes.Append(attribute3);
-                element.Attributes.Append(attribute4);
-                element.Attributes.Append(attribute5);
-                element.Attributes.Append(attribute6);
-                //root.AppendChild(element);
                 doc.Save(Console.Out);
                 return true;
             }

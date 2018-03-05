@@ -3,18 +3,48 @@
     NEW BILL
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="body" runat="server">
-    <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="Id" DataValueField="Id">
-    </asp:DropDownList>
-    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="DropDownList1" ErrorMessage="Select customer" ForeColor="Red"></asp:RequiredFieldValidator>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:WebDBConnectionString %>" SelectCommand="SELECT [Id] FROM [CustN]"></asp:SqlDataSource>
-    <br />
-    <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Create File" />
-    <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
     <div>
-        <asp:Button ID="additem" runat="server" Text="add item" OnClick="additem_Click" />
-        <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
-        <br />
-        <br />
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="false">
+            <Columns>
+                <asp:BoundField DataField="SrNo" HeaderText="SrNo" />
+                <asp:TemplateField HeaderText="ProductId">
+                    <ItemTemplate>
+                        <asp:Label ID="Label1" runat="server" Text="ASTl"></asp:Label>
+                    </ItemTemplate>
+                </asp:TemplateField>
+                <asp:TemplateField HeaderText="Description">
+                    <ItemTemplate>
+                        <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
+                    </ItemTemplate>
+                </asp:TemplateField>
+                <asp:TemplateField HeaderText="Batch">
+                    <ItemTemplate>
+                        <asp:Label ID="Label3" runat="server" Text="Label"></asp:Label>
+                    </ItemTemplate>
+                </asp:TemplateField>
+                <asp:TemplateField HeaderText="Serial">
+                    <ItemTemplate>
+                        <asp:Label ID="Label4" runat="server" Text="Label"></asp:Label>
+                    </ItemTemplate>
+                </asp:TemplateField>
+                <asp:TemplateField HeaderText="Type">
+                    <ItemTemplate>
+                        <asp:Label ID="Label5" runat="server" Text="Label"></asp:Label>
+                    </ItemTemplate>
+                </asp:TemplateField>
+                <asp:TemplateField HeaderText="TAX">
+                    <ItemTemplate>
+                        <asp:Label ID="Label6" runat="server" Text="Label"></asp:Label>
+                    </ItemTemplate>
+                </asp:TemplateField>
+                <asp:TemplateField HeaderText="Cost">
+                    <ItemTemplate>
+                        <asp:Label ID="Label7" runat="server" Text="Label"></asp:Label>
+                    </ItemTemplate>
+                </asp:TemplateField>
+            </Columns>
+        </asp:GridView>
     </div>
-
+    <asp:Button ID="ADD0" runat="server" Text="ADD ITEM" OnClick="ADD_Click" />
+    <asp:Button ID="ADD1" runat="server" Text="ADD ITEM" OnClick="ADD1_Click" />
 </asp:Content>
